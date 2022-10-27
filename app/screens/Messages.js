@@ -4,6 +4,8 @@ import ListItem from "../components/ListItem";
 import Screen from "../components/Screen";
 import ListItemSeparator from "../components/ListItemSeparator";
 import ListItemDeleteAction from "../components/ListItemDeleteAction";
+import IconComponent from "../components/IconComponent";
+import colors from "../config/colors";
 const initialMessages = [
   {
     id: 1,
@@ -13,9 +15,10 @@ const initialMessages = [
   },
   {
     id: 2,
-    title: "t2",
-    description: "d2",
-    image: require("../assets/mosh.jpg"),
+    title: "Mohit Sharma",
+    // description: "React Native Developer",
+    // image: require("../assets/mosh.jpg"),
+    icon: "format-list-bulleted",
   },
 ];
 
@@ -34,6 +37,9 @@ const Messages = () => {
         renderItem={({ item }) => (
           <ListItem
             image={item.image}
+            icon={item.icon}
+            iconSize={50}
+            iconBgColor={colors.primary}
             title={item.title}
             subtitle={item.description}
             onPress={() => console.log("message selected", item)}

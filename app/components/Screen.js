@@ -2,8 +2,8 @@ import { StyleSheet, View } from "react-native";
 import React from "react";
 import Constants from "expo-constants";
 
-const Screen = ({ children }) => {
-  return <View style={styles.screen}>{children}</View>;
+const Screen = ({ children, style }) => {
+  return <View style={[styles.screen, style]}>{children}</View>;
 };
 
 export default Screen;
